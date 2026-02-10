@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _sendKML() async {
     if (_csvData.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please pick a CSV file first.')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please pick a CSV file first!')));
       return;
     }
 
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('KML Sent!')));
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Connection Failed. Check Settings.')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Connection Failed!')));
     }
 
     await Future.delayed(const Duration(seconds: 1));
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ElevatedButton.icon(
                 onPressed: _cleanKML,
                 icon: const Icon(Icons.delete_forever),
-                label: const Text('Clean KML (Reset)'),
+                label: const Text('Clean KML'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.redAccent,
                   foregroundColor: Colors.white,

@@ -56,7 +56,7 @@ class _ConnectionScreenState extends State<ConnectionScreen> {
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-                content: Text('Connection Failed. Check IP/User/Pass.'),
+                content: Text('Connection Failed! Check IP/User/Pass.'),
                 backgroundColor: Colors.red
             )
         );
